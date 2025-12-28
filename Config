@@ -8,8 +8,7 @@ Changing VTP domain name from NULL to dhci.ir
 Switch(config)#vtp password 123
 Setting device VLAN database password to 123
 Switch(config)#vtp version 2
-VTP mode already in V2.
-Switch(config)#exit 
+VTP mode already in V2. 
 Switch(config)#interface gigabitEthernet 0/1
 Switch(config-if)#switchport mode dynamic desirable 
 
