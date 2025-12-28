@@ -1,0 +1,27 @@
+VTP SERVER
+Switch>enable 
+Switch#configure 
+Switch(config)#vtp mode server
+Device mode already VTP SERVER.
+Switch(config)#vtp domain dhci.ir
+Changing VTP domain name from NULL to dhci.ir
+Switch(config)#vtp password 123
+Setting device VLAN database password to 123
+Switch(config)#vtp version 2
+VTP mode already in V2.
+Switch(config)#exit 
+Switch(config)#interface gigabitEthernet 0/1
+Switch(config-if)#switchport mode dynamic desirable 
+
+VTP CLIENT
+Switch>enable 
+Switch#configure 
+Switch(config)#interface gigabitEthernet 0/1
+Switch(config-if)#switchport mode dynamic desirable 
+Switch(config-if)#exit 
+Switch(config)#vtp mode client 
+Setting device to VTP CLIENT mode.
+Switch(config)#vtp domain dhci.ir
+Domain name already set to dhci.ir.
+Switch(config)#vtp password 123
+Setting device VLAN database password to 123
